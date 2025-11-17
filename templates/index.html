@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaddyBot 2.0</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>MaddyBot 2.0</h1>
+        <span id="status-indicator"></span>
+      </header>
+      <section id="chat-transcript"></section>
+      <form id="chat-form" autocomplete="off" enctype="multipart/form-data">
+        <div id="upload-preview" class="upload-preview"></div>
+        <div class="input-container">
+          <div class="upload-buttons">
+            <label for="file-upload" class="upload-btn" title="Upload File">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </label>
+            <input type="file" id="file-upload" multiple accept=".txt,.pdf,.doc,.docx,.xlsx,.xls,.py,.js,.html,.css,.json,.md,.csv" style="display: none;">
+            
+            <label for="image-upload" class="upload-btn" title="Upload Image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </label>
+            <input type="file" id="image-upload" multiple accept="image/*" style="display: none;">
+            
+            <button type="button" id="voice-record-btn" class="upload-btn" title="Voice Input">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+                <path d="M12 15v-4"></path>
+                <path d="M9 9V5a3 3 0 0 1 6 0v4"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="listening-indicator" class="listening-indicator" style="display: none;">
+            <div class="listening-animation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span class="listening-text">Listening...</span>
+          </div>
+          <input
+            id="user-input"
+            type="text"
+            name="message"
+            placeholder="Say hello to your local AI assistant..."
+          />
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </body>
+</html>

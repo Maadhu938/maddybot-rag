@@ -1,0 +1,30 @@
+# Ignore environment and API keys
+.env
+
+# Python cache
+_pycache_/
+*.pyc
+
+# ChromaDB and embeddings
+memory/
+*.sqlite3
+*.bin
+
+# Local uploads or temp files
+uploads/
+temp/
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
