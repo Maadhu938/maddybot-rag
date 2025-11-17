@@ -60,7 +60,7 @@ Easily extendable.
 
 ### 1. Clone the repository (v2.0 branch)
 ```bash
-git clone -b v2.0 https://github.com/YOURUSERNAME/maddybot.git
+git clone https://github.com/YOURUSERNAME/maddybot-rag.git
 cd maddybot
 ```
 
@@ -106,7 +106,7 @@ maddybot2.0/
 
 ## 🏷️ Version
 
-**Current Release:** `v2.0`
+**Current Release:** `v1.0`
 
 Includes:
 - Multimodal input support  
