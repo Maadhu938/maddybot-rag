@@ -1,8 +1,0 @@
-{
-  "build": {
-    "builder": "NIXPACKS"
-  },
-  "deploy": {
-    "startCommand": "gunicorn app:app --worker-class=gthread --workers=2 --threads=4"
-  }
-}
